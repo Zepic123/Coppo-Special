@@ -1,0 +1,106 @@
+.bground{
+	background-color: #2C2F33;
+	text-align: center;
+}
+
+p{
+	color: #FFFFFF;
+	font-family: Tahoma;
+	line-height: 28px;
+}
+
+.head{
+	font-size: 48px;
+	text-align: center;
+	padding-left: 0px;
+	line-height: 50px;
+}
+
+label{
+	padding-left: 0px;
+	color: #FFFFFF;
+	font-family: Tahoma;
+}
+
+.normaltext{
+	color: #FFFFFF;
+	font-family: Tahoma;
+	line-height: 20px;
+	text-align:center;
+}
+
+.button1{
+	border: 1px solid #ECEFD3;
+	background: none;
+	padding: 10px 20px;
+	font-size: 28px;
+	font-family: Tahoma;
+	cursor: pointer;
+	margin:10px;
+	transition: 0.4s;
+	position: relative;
+	overflow: hidden;
+	color:#fff;
+	
+}
+
+.button1::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	background:#3C3F43;
+	z-index: -1;
+	transition: 0.4s;
+}
+
+.buttonanim1{
+	background-color: #3C3F43;
+}
+
+.buttonanim1:hover{
+	background-color: #0C0F13;
+}
+
+.buttonanim1::before{
+	bottom: 0;
+	border-radius; 50% 50% 0 0;
+}
+
+.buttonanim1:hover::before{
+	height: 180%:
+}
+
+.button2{
+	display: inline-block;
+	text-decoration: none;
+	background: none;
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	line-height: 40px;
+	border-radius: 50%;
+	font-family: Tahoma;
+	font-size: 36px;
+	overflow: hidden;
+	transition: 0.4s;
+	vertical-align: 30%;
+	border-color: #fff;
+	padding: 5px 5px;
+	border: solid 1px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.buttonanim2{
+	background-color: #3C3F43;
+}
+
+.buttonanim2:hover{
+	background-color: #1C1F23;
+}
+	
+	
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<title> Very professional website </title>
+</head>
+<body class = bground>
+
+	<p class = head><u> welcome! </u></p>
+	<p> This is my very profesional website to show off my very extensive portfolio. 
+		I am an aspiring graphic design artist, and online maths educator. Displayed
+		below are just a sample of the content I have created</p>
+	<br>
+	
+	<div style= "margin-bottom: auto; margin-top: auto;">
+		<button class = "button2 buttonanim2" style = " margin-right:10px;" onclick ="prevVid(vidURLs)"> < </button>
+		<iframe width="640" height="360" id = "vid"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<button class = "button2 buttonanim2" style = "margin-left:10px;" onclick ="nextVid(vidURLs)"> > </button>
+	<div>
+	<br>
+	<form class = "normaltext">
+		<label s>How epic was my portfolio?</label><br><br>
+		<input id = "userinput"><br>
+		<button type = "button" id = "btn" class="button1 buttonanim1" onclick = "submitEntry(entries)"> Submit </button>
+	</form>
+	
+	
+	
+	<script>
+	var entries = [];
+	var vidURLs = ["https://www.youtube.com/embed/ATXEWI9WoSw","https://www.youtube.com/embed/xtwur9mI4JU"];
+	var urlNum = 0;
+	let elVideo = document.getElementById("vid");
+	elVideo.src = vidURLs[urlNum];
+	
+	function submitEntry(entries){
+		var entry = document.getElementById("userinput").value;
+		if (entry != ""){
+			entries.push(entry);
+			console.log(entries);
+			alert("noted...");
+			document.getElementById("userinput").value = "";
+		}
+		else{
+			alert("Please enter a valid input");
+		}
+		
+	}
+	
+	function nextVid(){
+		urlNum+=1
+		if (urlNum == vidURLs.length){
+			urlNum = 0
+		}
+		elVideo.src = vidURLs[urlNum];
+	}
+	
+	function prevVid(){
+		urlNum-=1
+		if (urlNum == -1){
+			urlNum = vidUrls.length-1
+		}
+		elVideo.src = vidURLs[urlNum];
+	}
+		
+	
+	</script>
+
+</body>
+</html>
